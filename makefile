@@ -2,11 +2,8 @@ default:
     @cat makefile
 
 env:
-    (\
-    python3 -m venv env; \
-    source env/bin/activate; \
-    pip install -r requirements.txt;\
-    )
+    python3 -m venv env
+    source ~/bin/activate; pip install -r requirements.txt
 
 run:
     python bin/clockdeco_param.py
