@@ -6,8 +6,8 @@ env:
     source ~/bin/activate; pip install -r requirements.txt
 
 run:
-    python bin/clockdeco_param.py
+    source ~/bin/activate; python bin/clockdeco_param.py
 
-< your code here so the following task ALWAYS gets called, even though the directory exists >
+#< your code here so the following task ALWAYS gets called, even though the directory exists >
 tests:
     pytest -vv tests
