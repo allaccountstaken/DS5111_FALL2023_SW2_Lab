@@ -7,6 +7,9 @@ env:
 run:
 	@. env/bin/activate; python3 bin/clockdeco_param.py
 
+lint:
+	. env/bin/activate; pylint bin/perceptron.py
+
 #< your code here so the following task ALWAYS gets called, even though the directory exists >
 .PHONY: tests
 tests:
