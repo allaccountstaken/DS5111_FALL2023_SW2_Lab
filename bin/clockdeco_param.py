@@ -14,6 +14,8 @@ def clock(fmt=DEFAULT_FMT):
         return clocked 
     return decorate
 
+
+
 if __name__ == '__main__': 
     @clock()
     def snooze(seconds): 
