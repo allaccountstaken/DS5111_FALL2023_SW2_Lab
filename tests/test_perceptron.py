@@ -60,7 +60,7 @@ def test_primetime():
                           ([[0,0], [0,0], [0,0], [0,0]], [0,0,0,0], [0,0,0,0]), # default all 0 case
                           ([[1,1], [1,1], [1,1], [1,1]], [1,1,1,1], [1,1,1,1]), # default all 1s case
                           ([[1,1], [1,0], [0,1], [0,0]], [1,1,1,1], [1,1,1,1]), # wrong lables
-                          ([[1,1], [1,0], [1,1], [0,0]], [1,1,1,0], [1,1,1,0]) # different traing 
+                          ([[1,1], [1,0], [1,1], [0,0]], [1,1,1,0], [1,1,1,0]) # different traing
                          ])
 def test_papametrized(trainingset, labels, expected):
     # Given properly initialized perceptron
@@ -69,7 +69,4 @@ def test_papametrized(trainingset, labels, expected):
     the_perceptron.train(trainingset, labels)
     # Then check if predictions match expected
     for n, true_labels in zip(trainingset, expected):
-        assert the_perceptron.predict(n) == true_labels, f"testing for row number {n}"
-
-# TODO fixtures. instead of training a Perceptron with the same data set for 3 tests,
-#  have the Perceptron trained once in a function, and use a fixture to provide that to each of the 3 tests.
+        assert the_perceptron.predict(n) == true_labels
